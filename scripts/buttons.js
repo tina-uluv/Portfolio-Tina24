@@ -17,4 +17,59 @@ function LargerNumber() {
     }
 }
 
+function signOfproduct() { 
+    let num1 = parseInt(prompt("Insert a number"));
+    let num2 = parseInt(prompt("Insert one more number"));
+    let num3 = parseInt(prompt("insert last number"));
+    var product = num1 * num2 * num3; 
 
+    if (product > 0) {
+        document.getElementById("signOfproduct").innerHTML = ("It is positive");
+    }
+    else if (product < 0) {
+        document.getElementById("signOfproduct").innerHTML = ("It is negative");
+    }
+    else {
+        document.getElementById("signOfproduct").innerHTML = ("invalid");
+    }
+}
+
+function ThirdAngle() {
+    let angle1 = parseInt(prompt("Please enter first angle"));
+    let angle2 = parseInt(prompt("Please enter second angle"));
+    var angle3 = angle1 + angle2; 
+
+if ( angle3 < 180) {
+    var angle = 180 - sum; 
+    document.getElementById('ThirdAngle').innerHTML = ("Angle is" +angle);
+}
+else if (angle1 < 0 || angle2 < 0) {
+document.getElementById('ThirdAngle').innerHTML = ('Please enter angles greater than 0');
+}
+
+}
+
+function TenFour() {
+    for (i=i; i<100; i+=1) {
+        if(i % 10 ==0 && 1%4===0) {
+            console.log("TenFour");
+        }else if(i%4==0) {
+            console.log("Four");
+        }else if (i%10===0) {
+            console.log("Ten");
+        }
+        else {
+            console.log(i);
+        }
+           
+    }
+}
+
+function centuryFromYear() {
+    let year =  parseInt(prompt("Type a year to find out the century!"));
+    let century = 0;
+    century = Math.floor(year / 100 + 1);
+
+    document.getElementById('centuryFromYear').innerHTML = ('Answer is' + century)
+
+}
