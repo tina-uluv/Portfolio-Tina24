@@ -73,3 +73,36 @@ function centuryFromYear() {
     document.getElementById('centuryFromYear').innerHTML = ('Answer is' + century)
 
 }
+
+function Encrypt() {
+    let rawinput = prompt("Message"); 
+    let output = ""; 
+    rawinput = rawinput.split(" "); 
+    for (let i = 0; i < rawinput.length; i++) {
+        if (rawinput[1].length >= 2) {
+            output += 'CM2h' + (rawinput[1]).slice(1) + '15sd' + (rawinput[i][1]) + (rawinput[1][0]) + "ujhb";
+        }
+        else {
+            output += (rawinput[i][0]) + 'm11Hn'
+        }
+    }
+    document.getElementById('Encryption').innerHTML = ("Message" + output);
+}
+
+function decrypt() {
+    let ciphertext = prompt("Enter cipher text");
+    let output = '';
+
+    ciphertext = ciphertext.split(" "); 
+
+    for (let i = 0; i < ciphertext.length; i = i + 1) {
+        ciphertext[1] = ciphertext[i].replace(/CMd2h/g, '').replace(/m11Hn/g, '').replace(/15sd/g,'').replace(/ujhb/g,'');
+
+        if (ciphertext[i].length >= 2) {
+            output += [ciphertext[i].slice(-1)] + [(ciphertext[i]).slice(0, -2)] + ' ';
+        }
+    }
+    document.getElementById('Encryption').innerHTML = ("Message" + output); 
+}
+
+
